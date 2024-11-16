@@ -15,7 +15,7 @@ export const fetchImageDataAsBase64 = async (imageUri) => {
 
 // Function to send image to Gemini API
 export const sendImageToGeminiAPI = async (imageUri) => {
-  const apiKey = 'AIzaSyA49kKnxLWHWd-Pl0RqQOBvG7P3zh6AkH0';
+  const apiKey = ''; // API key
   const genAI = new GoogleGenerativeAI(apiKey);
 
   try {
@@ -26,7 +26,7 @@ export const sendImageToGeminiAPI = async (imageUri) => {
         mimeType: 'image/jpeg',
       },
     };
-    const prompt = 'You will be given an image of food. Analyze the quantity and quality in the image and provide three numbers: Calories, Fat, and Protein. Provide only the numbers in this order: Calories, Fat, Protein. No additional text.';
+    const prompt = '';// Prompt
 
     const result = await model.generateContent([img, prompt]);
     const response = await result.response;
@@ -35,6 +35,6 @@ export const sendImageToGeminiAPI = async (imageUri) => {
     const [calories, fat, protein] = text.split(',').map(item => item.trim());
     return { calories, fat, protein };
   } catch (error) {
-    console.error('Error sending image to Gemini API:', error);
+    console.error('Error sending image to API:', error);
   }
 };
