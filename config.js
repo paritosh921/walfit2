@@ -5,13 +5,13 @@ import { initializeAuth, getReactNativePersistence } from 'firebase/auth';
 
 // Firebase configuration
 const firebaseConfig = {
-  apiKey: 'AIzaSyDlltMPTlMMJISUSYnWhNyJMYu4Pv0RyNI',
-  authDomain: 'walfit-c6ff8.firebaseapp.com',
-  projectId: 'walfit-c6ff8',
-  storageBucket: 'walfit-c6ff8.appspot.com',
-  messagingSenderId: '555941055092',
-  appId: '1:555941055092:web:eaf6a679a9f2fb6075df21',
-  measurementId: 'G-W4NK8WTFP0' // You can remove this line if you're not using other features requiring it
+  apiKey: '',
+  authDomain: '',
+  projectId: '',
+  storageBucket: '',
+  messagingSenderId: '',
+  appId: '',
+  measurementId: ''
 };
 
 // Initialize Firebase
